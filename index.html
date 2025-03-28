@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos Bootstrap</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css
+    ">
+    <link rel="stylesheet" href="main.css">
+
+</head>
+
+<body>
+    <h1>Fundamentos do Bootstrap</h1>
+    <div class="container">
+        <div class="row">
+            <div class=" col-sm-12 col-lg-8 g-0">
+                <h2>Destaque</h2>
+
+            </div>
+            <div class=" col-sm-12 col-lg-4">
+                <h2>Barra lateral</h2>
+
+
+            </div>
+            <div class="col">
+                Coluna #3
+            </div>
+            <div class="col">
+                Coluna #4
+            </div>
+            <div class="col">
+                Coluna #5
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- utilizando atalho para criar container-linhas-colunas-img-h3 mais rápidamente no HTML com o atalho .conmtainer>.row>.col*5>img+h3 -->
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <img src="https://placehold.co/180x180" alt="">
+                <h3>Produto</h3>
+            </div>
+            <div class="col">
+                <img src="https://placehold.co/180x180" alt="">
+                <h3>Produto</h3>
+            </div>
+            <div class="col">
+                <img src="https://placehold.co/180x180" alt="">
+                <h3>Produto</h3>
+            </div>
+            <div class="col">
+                <img src="https://placehold.co/180x180" alt="">
+                <h3>Produto</h3>
+            </div>
+            <div class="col">
+                <img src="https://placehold.co/180x180" alt="">
+                <h3>Produto</h3>
+            </div>
+        </div>
+    </div>
+    <br><br>
+
+
+
+    <!-- TIPOGRAFIA COM BOOTSTRAP  AULA 3-->
+
+
+
+
+    <h1>Tipografia com Bootstrap</h1>
+    <h1 class="display-1">Teste</h1>
+    <!-- a classe display aumenta o tamanho da fonte e a deixa mais fina, o valor inserido é referente ao tamanhjo, outros valores irão diminuir o tamanho da fonte!-->
+    <p class="h1"> <!-- a classe H1 permite que outros textos fiquem do mesmo tamanho e formato de um h1 convencional-->
+        <mark>Texto em destaque</mark>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab mollitia delectus
+        quis facere iste praesentium
+        consequatur illum, natus laudantium corporis dolorem cupiditate quas quo amet voluptatem, soluta voluptate
+        cumque repellendus!
+    </p>
+    <br><br>
+
+
+
+
+
+    <!-- Aula 4 - TABELAS COM BOOTSTRAP -->
+
+
+
+
+    <h1>Tabela com Bootstrap</h1>
+
+    <table class="table table-dark">
+        <!-- NECESSÁRIO usar a classe table  na tag table para poder estilizar a tabela com o Bootstrap-->
+        <caption>Tabela de produtos</caption>
+        <thead>
+            <th>nome do produto</th>
+            <th>preço original</th>
+            <th>preço atual</th>
+            <th>Desconto</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>iPhone 13</td>
+                <td>7.000,00 R$</td>
+                <td>5.000,00 R$</td>
+                <td> - R$ 2.000.00</td>
+            </tr>
+            <tr>
+                <td>iPhone 13</td>
+                <td>7.000,00 R$</td>
+                <td>5.000,00 R$</td>
+                <td> - R$ 2.000.00</td>
+            </tr>
+            <tr>
+                <td>iPhone 13</td>
+                <td>7.000,00 R$</td>
+                <td>5.000,00 R$</td>
+                <td> - R$ 2.000.00</td>
+            </tr>
+        </tbody>
+    </table>
+    <br><br>
+
+
+
+    <!-- AULA 5 _ Botões com Bootstrap-->
+
+    <h1>Botão</h1>
+    <div class="botao">
+        <button class="btn btn-outline-dark btn-lg">click aqui</button>
+
+    </div>
+    <br> <br>
+
+
+    <!-- AULA 6 - Accordions -->
+
+    <h1>Accordions</h1>
+    <div class="accordion">
+        <div class="accordion-item">
+            <div class="accordion-header">
+                <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#Resposta1">Pergunta
+                    1</button>
+            </div>
+            <div id="Resposta1" class="accordio-collapse collapse ">
+                <div class="accordion-body">
+                    Resposta da pergunta 1
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <div class="accordion-header">
+                <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#Resposta2">Pergunta
+                    2</button>
+            </div>
+            <div id="Resposta2" class="accordio-collapse collapse">
+                <div class="accordion-body">
+                    Resposta da pergunta 2
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <br><br>
+
+    <!--       AULA 7 - COLLAPSE      -->
+
+    <!-- Aqui será programado um botão para que exiba um texto que 
+    inicialmente estará oculto e quanto 
+    o bnotão for clicado o preço será exibido-->
+
+    <h1>Botão para exibição ao clicar</h1>
+    <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#preco">
+        Ver preço
+    </button>
+    <div id="preco" class="collapse collapse">
+        <p class="display-6">
+            3x R$ 300,00
+        </p>
+    </div>
+
+    <br><br>
+
+
+    <!--               AULA 8 - ALERTAS                    -->
+
+    <div class="alert alert-warning alert-dismissible">
+        <button class="btn-close " data-bs-dismiss="alert"></button>
+        Sou uma menssagem de informação
+    </div>
+
+
+    <!--  AULA 9 - FORMULÁRIO COM BOOTSTRAP, CONSOLIDANDO TUDO O QUE FOI PASSADO NAS AULAS ANTERIORES -->
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3">
+
+                            <img src="https://placehold.co/180x180" />
+                            <h4>Título da postagem</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div>
+                    <img src="https://placehold.co/180x180" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js
+    "></script>
+
+</body>
+
+</html>
