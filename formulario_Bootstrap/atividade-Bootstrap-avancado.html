@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade Bootstrap</title>
+    <link rel="stylesheet" href="./lib/bootstrap.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #ffffff;
+        }
+
+        header {
+            background-color: #48e6e6;
+        }
+
+        .card {
+
+            overflow: hidden;
+            background-color: transparent;
+            background-color: #48e6e6 !important;
+        }
+
+        .card img {
+            max-height: 400px;
+            width: 100%;
+            max-width: auto;
+            cursor: pointer;
+            transition: transform 0.3s;
+            border-radius: 0.7rem;
+        }
+
+        .card img:hover {
+            transform: scale(1.04) rotate(2deg);
+        }
+    </style>
+</head>
+
+<body>
+    <header id="cabecalho">
+        <div class="navbar navbar-expand-lg">
+            <!-- Classe NAVBAR para indicar que se trata de um "menu"-->
+            <!-- Classe navbar-expand-lg para diminuir o tamanho dos botões, no entanto o botão do menu sumiu-->
+
+
+
+            <div class="container"> <!-- Usado a div com classe container para centralizar o conteudo -->
+                <h1>EBAC Viagens</h1>
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu"> <!-- classe para gerar o botão do menu, atributos 
+                    data para dar o efeito toggle (se não tiver, adicione, se tiver, oculte)-->
+
+                    <spann class="navbar-toggler-icon"></span>
+                        <!-- Classe usada para gerar o icone de menu minimizado -->
+                </button>
+                <nav class="collapse navbar-collapse justify-content-end" id="menu">
+
+                    <!-- Aqui a classe collapse e navbar-collapse irá fazer com que os elementos ajam com o efeito collapse, 
+                    criado o ID MENU e adicionado ao target no botão para que o efeito seja chamdo-->
+
+                    <!-- também usado o justify-content-end para alinhar os elementos a direita da página-->
+
+                    <ul class="nav nav-pills navbar-nav">
+                        <!-- Uso da classe Nav-pills para dar espaçamento entre os elementos li ( efeito de gap ou margin)-->
+                        <!-- Uso da classe NAV para que os elementos fiquem um ao lado do outro ( como display flex)-->
+                        <!-- Uso da classe Navbar-nav para que os elementos fiquem um a baixo do outro ( efeito do display block)-->
+                        <li class="nav-item">
+                            <!-- Uso da classe nav-item para indicar ao Bootstrap que é um item do NAV-->
+                            <a class="nav-link active" href="#inicio">Início</a>
+                            <!-- Uso da classe nav-link indica ao nav item que se trata de um link redirecionável-->
+                            <!-- Podemos usar a classe ACTIVE para indicar qual dos ítens está ativo no momento -->
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="#produtos">Viagens</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="#promocoes">Promoções</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="#contato">Contato</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+
+    <!--                           SESSÃO DE CAROUSEL                            -->
+
+
+
+    <section>
+        <div>
+            <div id="carousel-exemplo" class="carousel carousel-fade slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div data-bs-interval="2500" class="carousel-item active img ">
+                        <img class="d-block w-100" src="./image/banner1.jpg" />
+                        <div class="carousel-caption">
+                            <h2>Lugares tropicais</h2>
+                        </div>
+                    </div>
+                    <div data-bs-interval="2500" class="carousel-item img">
+                        <img class="d-block w-100" src="./image/banner2.jpg" />
+                        <div class="carousel-caption">
+                            <h2>Natureza e campo aberto</h2>
+                        </div>
+                    </div>
+                    <div data-bs-interval="2500" class="carousel-item img ">
+                        <img class="d-block w-100" src="./image/banner3.jpg" />
+                        <div class="carousel-caption">
+                            <h2>Fazendas para relaxar</h2>
+                        </div>
+                    </div>
+
+                    <button data-bs-target="#carousel-exemplo" data-bs-slide="prev" class="carousel-control-prev  "
+                        type="button">
+                        <span class="carousel-control-prev-icon"></span>
+                    </button>
+                    <button data-bs-target="#carousel-exemplo" data-bs-slide="next" class="carousel-control-next "
+                        type="button">
+                        <span class="carousel-control-next-icon "></span>
+                    </button>
+                    <div class="carousel-indicators">
+                        <button class="active" type="button" data-bs-target="#carousel-exemplo"
+                            data-bs-slide-to="0"></button>
+                        <button type="button" data-bs-target="#carousel-exemplo" data-bs-slide-to="1"></button>
+                        <button type="button" data-bs-target="#carousel-exemplo" data-bs-slide-to="2"></button>
+
+                    </div>
+                </div>
+            </div>
+    </section>
+
+
+
+
+    <!--                 GRID COM CARDS                -->
+
+
+
+    <section>
+        <div class="container">
+            <div class="row">
+                <h2 class="text-center">Mais procurados</h2>
+                <div class="col-12 col-md-6 col-lg-4 p-2">
+                    <div class="card text-bg-dark">
+                        <div class="card-header">
+                            <h2 class="text-center">França</h2>
+                        </div>
+                        <img src="./image/card1.jpg" />
+                        <div class="card-body">
+                            <h4 class="car-title">Titulo do card</h4>
+                            <h5 class="card-subtitle">Subtítulo do Title</h5>
+                            <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci,
+                                omnis
+                                dolorum aperiam quae voluptas sequi est ducimus voluptatum porro dolor inventore
+                                repellendus
+                                delectus modi facilis ad odit maxime culpa commodi.</p>
+                            <a href="#" class="btn btn-primary">Botão link</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 p-2">
+                    <div class="card text-bg-dark">
+                        <div class="card-header">
+                            <h2 class="text-center">Grécia</h2>
+                        </div>
+                        <img src="./image/greece.jpg" />
+                        <div class="card-body">
+                            <h4 class="car-title">Titulo do card</h4>
+                            <h5 class="card-subtitle">Subtítulo do Title</h5>
+                            <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci,
+                                omnis
+                                dolorum aperiam quae voluptas sequi est ducimus voluptatum porro dolor inventore
+                                repellendus
+                                delectus modi facilis ad odit maxime culpa commodi.</p>
+                            <a href="#" class="btn btn-primary">Botão link</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 p-2">
+                    <div class="card text-bg-dark">
+                        <div class="card-header">
+                            <h2 class="text-center">Itália</h2>
+                        </div>
+                        <img src="./image/venice.jpg" />
+                        <div class="card-body">
+                            <h4 class="car-title">Titulo do card</h4>
+                            <h5 class="card-subtitle">Subtítulo do Title</h5>
+                            <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci,
+                                omnis
+                                dolorum aperiam quae voluptas sequi est ducimus voluptatum porro dolor inventore
+                                repellendus
+                                delectus modi facilis ad odit maxime culpa commodi.</p>
+                            <a href="#" class="btn btn-primary">Botão link</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 p-2">
+                    <div class="card text-bg-dark">
+                        <div class="card-header">
+                            <h2 class="text-center">Suiça</h2>
+                        </div>
+                        <img src="./image/suiça.jpg" />
+                        <div class="card-body">
+                            <h4 class="car-title">Titulo do card</h4>
+                            <h5 class="card-subtitle">Subtítulo do Title</h5>
+                            <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci,
+                                omnis
+                                dolorum aperiam quae voluptas sequi est ducimus voluptatum porro dolor inventore
+                                repellendus
+                                delectus modi facilis ad odit maxime culpa commodi.</p>
+                            <a href="#" class="btn btn-primary">Botão link</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 p-2">
+                    <div class="card text-bg-dark">
+                        <div class="card-header">
+                            <h2 class="text-center">Londres</h2>
+                        </div>
+                        <img src="./image/londres.jpg" />
+                        <div class="card-body">
+                            <h4 class="car-title">Titulo do card</h4>
+                            <h5 class="card-subtitle">Subtítulo do Title</h5>
+                            <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci,
+                                omnis
+                                dolorum aperiam quae voluptas sequi est ducimus voluptatum porro dolor inventore
+                                repellendus
+                                delectus modi facilis ad odit maxime culpa commodi.</p>
+                            <a href="#" class="btn btn-primary">Botão link</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 p-2">
+                    <div class="card text-bg-dark">
+                        <div class="card-header">
+                            <h2 class="text-center">Canadá</h2>
+                        </div>
+                        <img src="./image/canadá.jpg" />
+                        <div class="card-body">
+                            <h4 class="car-title">Titulo do card</h4>
+                            <h5 class="card-subtitle">Subtítulo do Title</h5>
+                            <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci,
+                                omnis
+                                dolorum aperiam quae voluptas sequi est ducimus voluptatum porro dolor inventore
+                                repellendus
+                                delectus modi facilis ad odit maxime culpa commodi.</p>
+                            <a href="#" class="btn btn-primary">Botão link</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="./lib/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
